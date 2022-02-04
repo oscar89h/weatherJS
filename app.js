@@ -1,6 +1,5 @@
 const wLocation = document.querySelector('#w-location');
 
-
 const ui = new UI();
 
 const storage = new Storage();
@@ -9,9 +8,7 @@ const weatherLocation = storage.changeLocationData();
 
 const weather = new Weather(weatherLocation.city, weatherLocation.state);
 
-
 document.addEventListener('DOMContentLoaded', getWeather);
-
 
 document.querySelector('#w-change-btn').addEventListener('click', (e) => {
     const city = document.querySelector('#city').value;
@@ -24,7 +21,6 @@ document.querySelector('#w-change-btn').addEventListener('click', (e) => {
     storage.setLocationData(city, state)
 
     $('#localModal').modal('hide');
-
 })
 
 
@@ -34,5 +30,4 @@ function getWeather() {
             ui.paint(weatherItem);
         })
         .catch(err => console.log(err));
-
 }
