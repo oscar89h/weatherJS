@@ -23,7 +23,6 @@ document.querySelector('#w-change-btn').addEventListener('click', (e) => {
     $('#localModal').modal('hide');
 })
 
-
 function getWeather() {
     weather.getWeather()
         .then((weatherItem) => {
